@@ -3,18 +3,17 @@ layout: default
 title: Archive
 ---
 
+{% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories | join: ', '" %}
 
-
-
-{% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
-{% for yearMonth in postsByYearMonth %}
-  <h2>{{ yearMonth.name }}</h2>
-
-  <h2>{{post.title}}</h2>
+{% for category in postsByCategory %}
+  <h2>{{ category.name }}</h2> <!-- 카테고리 이름을 출력 -->
 
   <ul>
-    {% for post in yearMonth.items %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% for post in category.items %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></small>
+      </li>
     {% endfor %}
   </ul>
 {% endfor %}
