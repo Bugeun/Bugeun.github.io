@@ -6,13 +6,17 @@ title: Archive
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories | join: ', '" %}
 
 {% for category in postsByCategory %}
-  <h2>{{ category.name }}</h2> <!-- 카테고리 이름을 출력 -->
+  <h2>{{ category.name }}</h2> <!-- 카테고리 이름 출력 -->
 
-  <ul>
+  <ul style="list-style: none; padding: 0; margin: 0;">
     {% for post in category.items %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></small>
+      <li style="margin-bottom: 0.5em;">
+        <span style="color: #8b949e; font-size: 0.7em; margin-right: 1em;">
+          {{ post.date | date: "%Y-%m-%d" }}
+        </span>
+        <a href="{{ post.url }}" style="text-decoration: none; color:rgb(255, 255, 255);">
+          {{ post.title }}
+        </a>
       </li>
     {% endfor %}
   </ul>
