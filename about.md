@@ -19,22 +19,35 @@ layout: page
 <hr>
 
 <h3>Seoul Arts University</h3>
-&nbsp;&nbsp;Major in Applied Music
+&nbsp;&nbsp;(2020 - 2023) Major in Applied Music
 <br>
 <h3>KITRI Best of the Best 2th</h3>
-&nbsp;&nbsp;Vulnerability Analysis Track
+&nbsp;&nbsp;(2013 - 2014) Vulnerability Analysis Track
 <br>
 <br>
+
+<h1> EXPERIENCE </h1>
+<hr>
+<h3>Work History</h3>
+&nbsp;&nbsp;&nbsp;<small> (2024.04 - Till now) SK Shieldus Senior Researcher </small>
+<br>
+<h3>Vulnerability Reports</h3>
+&nbsp;&nbsp;&nbsp;<small> (2013) OCS (Order Communication System) at a Major Hospital in Changwon </small>
+<br>
+
 
 <h1> ACHIEVEMENTS </h1>
 <hr>
 
-<h3>Pwn2Own Automotive Tokyo 2025 Win a prize (Team SK Shieldus)</h3>
-<h3>5th, White Hat Contest</h3>
-<h3>11th, Codegate 2013 Final (Team ForbiddenBITS)</h3>
-<h3>8th, PHdays CTF Final (Team ForbiddenBITS)</h3>
-<h3>8th, Nuit du Hack CTF (Team ForbiddenBITS)</h3>
-<h3>President's Award (Korea Internet & Security Agency Cyber Attack Scenario Contest)</h3>
+<h3>(2025) Pwn2Own Automotive Tokyo 2025 Win a prize (Team SK Shieluds)</h3>
+<h3>(2024) 6th, Block Harbor VicOne Automotive CTF - Season 2 (Team a99)
+<h3>(2023) 11th, CakeCTF 2024</h3>
+<h3>(2013) 5th, White Hat Contest</h3>
+<h3>(2013) 11th, Codegate 2013 Final (Team ForbiddenBITS)</h3>
+<h3>(2013) 8th, PHdays CTF Final (Team ForbiddenBITS)</h3>
+<h3>(2012) 8th, Nuit du Hack CTF (Team ForbiddenBITS)</h3>
+<h3>(2012) President's Award (Korea Internet & Security Agency Cyber Attack Scenario Contest)</h3>
+<br>
 
 <hr>
   <div style="text-align: center; margin-top: 20px;">

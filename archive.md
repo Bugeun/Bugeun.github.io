@@ -6,7 +6,7 @@ title: Archive
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories | join: ', '" %}
 
 {% for category in postsByCategory %}
-  <h2>{{ category.name }}</h2> <!-- 카테고리 이름 출력 -->
+  <h2><span style = "color: rgb(65, 140, 75);"> {{ category.name }} </span></h2> <!-- 카테고리 이름 출력 -->
 
   <ul style="list-style: none; padding: 0; margin: 0;">
     {% for post in category.items %}
