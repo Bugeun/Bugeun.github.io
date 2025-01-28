@@ -3,7 +3,10 @@ layout: default
 title: Home 
 ---
 
+
 <div class="posts">
+  
+
   {% assign current_category = page.category %}
   {% for post in paginator.posts %}
   
@@ -16,6 +19,7 @@ title: Home
       {% endfor %}
     </div>
    {% endif %}
+    
 
     <h1 class="post-title">
       <a href="{{ post.url | relative_url }}">

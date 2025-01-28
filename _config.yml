@@ -45,11 +45,14 @@ nav:
   - title: About
     url: /about
 
-  - title: Post
+  - title: Research
     url: /archive
 
-  - title: Writeup
-    url: https://bugeun1007.tistory.com/category/Writeup
+  - title: Blog
+    url: https://bugeun1007.tistory.com/
+
+  - title: Coding
+    url: /Coding
 
 # Category
 collections:

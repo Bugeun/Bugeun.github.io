@@ -3,19 +3,14 @@ layout: default
 title: Archive
 ---
 
-
-<h2> Vulnerability Research </h2>
-<hr>
-
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories | join: ', '" %}
 
 {% for category in postsByCategory %}
-{% if category.name != "Coding" %}
-  <h2><span style="color: rgb(65, 140, 75);"> {{ category.name }} </span></h2> <!-- 카테고리 이름 출력 -->  
-{% endif %}
+{% if category.name contains "Coding" %}
+
+
   <ul style="list-style: none; padding: 0; margin: 0;">
     {% for post in category.items %}
-    {% unless post.categories contains "Coding" %}
       <li style="margin-bottom: 0.5em;">
         {% if post.published == false %}
           <!-- 비공개 글 -->
@@ -35,9 +30,9 @@ title: Archive
           </a>
         {% endif %}
       </li>
-      {% endunless %}
-  
-  {% endfor %}
+    {% endfor %}
   </ul>
 
+  {% endif %}
 {% endfor %}
+
