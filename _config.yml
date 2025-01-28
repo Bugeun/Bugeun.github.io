@@ -45,11 +45,8 @@ nav:
   - title: About
     url: /about
 
-  - title: Research
+  - title: Post
     url: /archive
-
-  - title: Blog
-    url: https://bugeun1007.tistory.com/
 
   - title: Coding
     url: /Coding
