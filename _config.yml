@@ -48,6 +48,9 @@ nav:
   - title: Blog
     url: /archive
 
+  - title: Writeup
+    url: https://bugeun1007.tistory.com/category/Writeup
+
 # Category
 collections:
   category:
