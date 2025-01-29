@@ -44,7 +44,7 @@ title: Archive
   {% if category.name == "Internals" %}
   <small>Software Internals, Hardware/CPU Architectures</small>
   {% elsif category.name == "Techniques" %}
-  <small>Exploit,bug-analysis,Reversing's tips article</small>
+  <small>Tools,Exploit,bug-analysis,Reversing's tips article</small>
   {% elsif category.name == "Writeup" %}
   <small>CTF,Wargame especially pwn,reversing</small>
   {% elsif category.name == "Bug-Hunting" %}
