@@ -66,8 +66,8 @@ layout: page
     <a href="https://dreamhack.io/users/58029" style="margin: 0 10px; text-decoration: none; color:rgb(43, 29, 236);">
     <i class="fas fa-shield-alt" style="font-size: 24px;"></i>
   </a>
-    <a href="instagram" style="margin: 0 10px; text-decoration: none; color:rgb(43, 29, 236);">
-    <i class=" " style="font-size: 24px;"></i>
+    <a href="https://www.instagram.com/bugeun__/" style="margin: 0 10px; text-decoration: none;">
+    <i class="fa-brands fa-square-instagram" style="font-size: 24px;"></i>
   </a>
 
 </div>

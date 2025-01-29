@@ -41,7 +41,7 @@ title: Archive
 {% if category.name != "Coding" %}
   <b><span style="color: rgb(156, 195, 231); font-size: 0.9em;margin-right: 1em;"> {{ category.name }} </span></b> <!-- 카테고리 이름 출력 -->  
   <hr>
-  {% if category.name == "Technique" %}
+  {% if category.name == "Techniques" %}
   <small>Exploit,bug-analysis,Article</small>
   {% elsif category.name == "Writeup" %}
   <small>CTF,Wargame</small>
