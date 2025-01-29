@@ -67,7 +67,7 @@ layout: page
     <i class="fas fa-shield-alt" style="font-size: 24px;"></i>
   </a>
     <a href="https://www.instagram.com/bugeun__/" style="margin: 0 10px; text-decoration: none;">
-    <i class="fa-brands fa-square-instagram" style="font-size: 24px;"></i>
+    <i class="fa-solid fa-hashtag" style="font-size: 30px;"></i>
   </a>
 
 </div>

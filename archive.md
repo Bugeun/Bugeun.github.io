@@ -44,7 +44,7 @@ title: Archive
   {% if category.name == "Techniques" %}
   <small>Exploit,bug-analysis,Article</small>
   {% elsif category.name == "Writeup" %}
-  <small>CTF,Wargame</small>
+  <small>CTF,Wargame especially pwn,reversing</small>
   {% elsif category.name == "Bug-Hunting" %}
   <small>(N-day-Case-Study,0-day-reports)-in-Real-World</small>
   {% endif %}
