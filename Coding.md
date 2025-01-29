@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: Coding
 title: Archive
 ---
 
-{% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories | join: ', '" %}
+{% assign postsByCategory = site.posts | group_by_exp: "post", "Coding.categories | join: ', '" %}
 
 {% for category in postsByCategory %}
 {% if category.name contains "Coding" %}
@@ -25,7 +25,7 @@ title: Archive
           <span style="color: #8b949e; font-size: 0.7em; margin-right: 1em;">
             {{ post.date | date: "%Y-%m-%d" }}
           </span>
-          <a href="{{ post.url }}" style="text-decoration: none; color: rgb(255, 255, 255);">
+          <a href="{{ Coding.url }}" style="text-decoration: none; color: rgb(255, 255, 255);">
             {{ post.title }}
           </a>
         {% endif %}
