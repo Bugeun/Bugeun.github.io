@@ -4,9 +4,9 @@ layout: default
 
 <article class="Coding">
 
-    <h1 class="Coding-title">{{ Coding.title }}</h1>
+    <h1 class="Coding-title">{{ post.title }}</h1>
 
-    <time datetime="{{ Coding.date | date_to_xmlschema }}" class="Coding-date">{{ Coding.date | date_to_string }}</time>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="Coding-date">{{ post.date | date_to_string }}</time>
 
     {{ content }}
 
@@ -21,7 +21,7 @@ layout: default
           <li>
             <a href="{{ site.baseurl }}{{ post.url }}">
               {{ Coding.title }}
-              <small><time datetime="{{ Coding.date | date_to_xmlschema }}">{{ Coding.date | date_to_string }}</time></small>
+              <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
             </a>
           </li>
 
