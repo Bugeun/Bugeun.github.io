@@ -42,13 +42,13 @@ title: Archive
   <b><span style="color: rgb(156, 195, 231); font-size: 0.9em;margin-right: 1em;"> {{ category.name }} </span></b> <!-- 카테고리 이름 출력 -->  
   <hr>
   {% if category.name == "Internals" %}
-  <small>Software Internals, Hardware/CPU Architectures</small>
+  <span style = "font-size: 0.7em;">Software Internals, Hardware/CPU Architectures</span>
   {% elsif category.name == "Techniques" %}
-  <small>Tools,Exploit,bug-analysis,Reversing's tips article</small>
+  <span style = "font-size: 0.7em;">Exploit, Bug analysis, Reversing tips & article</span>
   {% elsif category.name == "Writeup" %}
-  <small>CTF,Wargame especially pwn,reversing</small>
+  <span style = "font-size: 0.7em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
   {% elsif category.name == "Bug-Hunting" %}
-  <small>(N-day-Case-Study,0-day-discovered-reports)-in-Real-World</small>
+  <span style = "font-size: 0.7em;">N day Case Study, 0 day discovered reports</span>
   {% endif %}
 {% endif %}
   <ul style="list-style: none; padding: 0; margin: 0;"> 
