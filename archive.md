@@ -32,7 +32,7 @@ title: Archive
 <b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.3em;margin-right: 1em;"> Vulnerability Research </span></b>
 <br>
 <br>
-<small>I am especially interested in software vulnerability analysis, binary exploitation, and reverse engineering.</small>
+<small>Below are posts about vulnerability research</small>
 
 <br>
 
@@ -42,12 +42,13 @@ title: Archive
 {% if category.name != "Coding" %}
   <b><span style="color: rgb(156, 195, 231); font-size: 0.9em;margin-right: 1em;"> {{ category.name }} </span></b> <!-- 카테고리 이름 출력 -->  
   <hr>
-  {% if category.name == "Study" %}
-  <span style = "font-size: 0.8em;">Exploitation, Reversing techniques, Articles of software internals</span>
+  {% if category.name == "Research" %}
+  <span style = "font-size: 0.8em;">Research for Vulnerability analysis, Exploit technique, Software internals</span>
   {% elsif category.name == "Writeup" %}
   <span style = "font-size: 0.8em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
-  {% elsif category.name == "Bug-Hunting" %}
-  <span style = "font-size: 0.8em;">Bug analysis research, CVE Case Study, 0 day discovered reports</span>
+  {% elsif category.name == "CVE-Analysis" %}
+  <span style = "font-size: 0.8em;">CVE Case Study</span>
+  {% elsif category.name == "Post" %}
   {% endif %}
 {% endif %}
   <ul style="list-style: none; padding: 0; margin: 0;"> 

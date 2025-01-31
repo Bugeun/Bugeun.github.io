@@ -12,8 +12,11 @@ layout: page
   <b>Bugeun Choi</b><br>
   
   Vulnerability Researcher
-  <br>
 </p>
+
+  I am especially interested in software vulnerability analysis, binary exploitation, and reverse engineering.
+  <br>
+  <br>
 
 <h1> EDUCATION </h1>
 <hr>
