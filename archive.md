@@ -45,7 +45,7 @@ title: Archive
   {% if category.name == "Internals" %}
   <span style = "font-size: 0.8em;">Software Internals, Hardware/CPU Architectures</span>
   {% elsif category.name == "Techniques" %}
-  <span style = "font-size: 0.8em;">Exploit, Bug analysis, Reversing tips & article</span>
+  <span style = "font-size: 0.8em;">Exploitation, Bug analysis, Reversing tips & article</span>
   {% elsif category.name == "Writeup" %}
   <span style = "font-size: 0.8em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
   {% elsif category.name == "Bug-Hunting" %}
