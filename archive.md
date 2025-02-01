@@ -48,6 +48,7 @@ title: Archive
   <span style = "font-size: 0.8em;">Research for Vulnerability analysis, Exploit technique, Software internals</span>
   <br>
   {% for subCategory in subCategories %}
+  {% unless post.categories contains "Coding" %}
   <b><span style="color: rgb(151, 162, 170); font-size: 0.8em; margin-left: 0.3em;">{{ subCategory.name }}</span></b>
   {% for post in subCategory.items %}
   <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;margin-left: 1.5em;">
@@ -56,8 +57,8 @@ title: Archive
   <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
   {{ post.title }}
   {% endfor %}
+  {% endunless %}
   {% endfor %}
-  
   {% elsif category.name == "Writeup" %}
   <span style = "font-size: 0.8em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
   {% elsif category.name == "CVE-Analysis" %}
@@ -65,6 +66,7 @@ title: Archive
   {% elsif category.name == "Post" %}
   {% endif %}
 {% endif %}
+
   <ul style="list-style: none; padding: 0; margin: 0;"> 
     {% for post in category.items %}
     {% unless post.categories contains "Coding" %}
