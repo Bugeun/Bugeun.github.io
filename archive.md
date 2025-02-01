@@ -87,13 +87,14 @@ title: Archive
           </span>
           <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
             {{ post.title }}
+             
           </a>
         {% endif %}
       </li>
       {% endunless %}
       {% endunless %}
-  
+ 
   {% endfor %}
-  </ul>
   <br>
+  </ul>
 {% endfor %}
