@@ -48,7 +48,7 @@ title: Archive
   <span style = "font-size: 0.8em;">Research for Vulnerability analysis, Exploit technique, Software internals</span>
   <br>
   {% for subCategory in subCategories %}
-  <b><span style="color: rgb(180, 184, 123); font-size: 0.8em; margin-left: 0.3em;">{{ subCategory.name }}</span></b>
+  <b><span style="color: rgb(172, 201, 196); font-size: 0.8em; margin-left: 0.3em;">{{ subCategory.name }}</span></b>
   {% for post in subCategory.items %}
   <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;margin-left: 1.5em;">
   {{ post.date | date: "%Y-%m-%d" }}
