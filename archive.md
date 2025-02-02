@@ -5,27 +5,28 @@ title: Archive
 
 <style>
   ul {
-    margin: 0 !important;
+    margin-bottom: 0.5em !important;
     padding: 0 !important;
   }
 
   li {
-    margin-top: 0 !important;
+    margin-top: 0.3 !important;
     margin-bottom: 0 !important;
   }
 
   hr {
-    margin: 0 !important;  /* hr 간격 없애기 */
+    margin-bottom: 0.5em !important;  /* hr 간격 없애기 */
+    margin-top: 0.3em !important;
     padding: 0 !important;
   }
 
   .category-header {
-    margin-bottom: 0.1em !important; /* 카테고리 제목과 내용 간 간격 줄이기 */
+    margin-bottom: 0.7em !important; /* 카테고리 제목과 내용 간 간격 줄이기 */
   }
 
   .description {
-    margin-top: 0.1em !important;
-    margin-bottom: 0.1em !important; /* 설명과 내용 간 간격 줄이기 */
+    margin-top: 0em !important;
+    margin-bottom: 0em !important; /* 설명과 내용 간 간격 줄이기 */
   }
 </style>
 
@@ -33,68 +34,78 @@ title: Archive
 <br>
 <br>
 <small>Below are posts about vulnerability research</small>
-
+<br>
 <br>
 
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories.first" %}
 
-
 {% for category in postsByCategory %}
 {% if category.name != "Coding" %}
-  <b><span style="color: rgb(156, 195, 231); font-size: 0.9em;margin-right: 1em;"> {{ category.name }} </span></b> <!-- 카테고리 이름 출력 -->  
+  <p style="line-height: 2em;">
+  <div><b><span style="color: rgb(156, 195, 231); font-size: 1.1em;margin-right: 1.2em; margin: 0em;"> {{ category.name }} </span></b></div> 
   <hr>
-  {% if category.name == "Research" %}
+
+  {% if category.name == "Posts" %}
   {% assign subCategories = category.items | where_exp: "post", "post.categories.size > 1" | group_by_exp: "post", "post.categories[1]" %}
-  <span style = "font-size: 0.8em;">Research for Vulnerability analysis, Exploit technique, Software internals</span>
-  <br>
   {% for subCategory in subCategories %}
-  {% unless post.categories contains "Coding" %}
-  <b><span style="color: rgb(151, 162, 170); font-size: 0.8em; margin-left: 0.3em;">{{ subCategory.name }}</span></b>
+  <p style="line-height: 1.5;">
+  <div><b><span style="color: rgb(151, 162, 170); font-size: 0.8em; margin-left: 0.5em;margin-bottom: 0.8em;">{{ subCategory.name }}</span></b></div>
+
+  <ul style="list-style: none; padding: 0; margin: 0;"> 
   {% for post in subCategory.items %}
-  <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;margin-left: 1.5em;">
+  <li style="margin-bottom: 0.5em;">
+  <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;margin-left: 0.5em;">
   {{ post.date | date: "%Y-%m-%d" }}
   </span>
   <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
   {{ post.title }}
+  </a>
+  </li>
   {% endfor %}
-  {% endunless %}
+  <div><br></div>
   {% endfor %}
-  {% elsif category.name == "Writeup" %}
-  <span style = "font-size: 0.8em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
-  {% elsif category.name == "CVE-Analysis" %}
-  <span style = "font-size: 0.8em;">CVE Case Study</span>
-  {% elsif category.name == "Post" %}
-  {% endif %}
-{% endif %}
-
-  <ul style="list-style: none; padding: 0; margin: 0;"> 
-    {% for post in category.items %}
-    {% unless post.categories contains "Coding" %}
-    {% unless post.categories contains "Research" %}
-      <li style="margin-bottom: 0.5em;">
-        {% if post.published == false %}
-          <!-- 비공개 글 -->
-          <span style="color: #8b949e; font-size: 0.8em; margin-right: 1em;">
-            비공개
-          </span>
-          <span style="color: rgb(255, 255, 255);">
-            {{ post.title }}
-          </span>
-        {% else %}    
-          <!-- 공개 글 -->
-          <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;">
-            {{ post.date | date: "%Y-%m-%d" }}
-          </span>
-          <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
-            {{ post.title }}
-             
-          </a>
-        {% endif %}
-      </li>
-      {% endunless %}
-      {% endunless %}
- 
-  {% endfor %}
-  <br>
   </ul>
+  
+<!-- Writeup -->
+  {% elsif category.name == "Writeup" %}
+    <span style = "font-size: 0.8em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
+    <div><br></div>
+      <ul style="list-style: none; padding: 0; margin: 0;"> 
+      {% for post in category.items %}
+        <li style="margin-bottom: 0.3em;">
+            <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;">
+              {{ post.date | date: "%Y-%m-%d" }}
+            </span>
+            <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
+              {{ post.title }}
+            </a>
+        </li>
+      {% endfor %}
+        <div><br></div>
+      </ul>
+
+
+<!-- Analysis Reports -->
+  {% elsif category.name == "Analysis Reports" %}
+  {% assign subCategories = category.items | where_exp: "post", "post.categories.size > 1" | group_by_exp: "post", "post.categories[1]" %}
+  {% for subCategory in subCategories %}
+  <p style="line-height: 1.5;">
+  <div><b><span style="color: rgb(151, 162, 170); font-size: 0.8em; margin-left: 0.5em;margin-bottom: 0.5em;margin-top: 0.5em;">{{ subCategory.name }}</span></b></div>
+  
+  <ul style="list-style: none; padding: 0; margin: 0.2;"> 
+  {% for post in subCategory.items %}
+  <li style="margin-bottom: 0.3em;">
+  <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;margin-left: 0.5em;">
+  {{ post.date | date: "%Y-%m-%d" }}
+  </span>
+  <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
+  {{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+  <div><br></div>
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endif %}
 {% endfor %}
