@@ -62,6 +62,7 @@ title: Archive
   
 <!-- Writeup -->
   {% elsif category.name == "Writeup" %}
+    <span style = "font-size: 0.8em; margin-left: 0em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
       <ul style="list-style: none; padding: 0; margin: 0;"> 
       {% for post in category.items %}
         <li style="margin-bottom: 0.3em;">
@@ -73,8 +74,6 @@ title: Archive
             </a>
         </li>
       {% endfor %}
-        <div><br></div>
-        <span style = "font-size: 0.8em; margin-left: 0em;">CTF, Wargame write up focused on Pwnable and Reversing</span>
         <div><br></div>
       </ul>
 {% endif %}
