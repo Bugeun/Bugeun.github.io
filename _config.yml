@@ -45,14 +45,17 @@ nav:
   - title: About
     url: /about
 
-  - title: VR-Publications
+  - title: Posts
     url: /archive
 
   - title: Coding
     url: /Coding
 
-  - title: Blog
+  - title: Writeups
     url: https://bugeun1007.tistory.com/
+
+  - title: VR-Publications
+    url:
 
 # Category
 collections:
