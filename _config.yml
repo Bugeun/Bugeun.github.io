@@ -10,7 +10,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-get-json
 
 # Optimize Jekyll
 exclude:
@@ -46,14 +45,14 @@ nav:
   - title: About
     url: /about
 
-  - title: Posts
+  - title: Research
     url: /archive
 
   - title: Coding
     url: /Coding
 
   - title: Writeups
-    url: https://bugeun1007.tistory.com/
+    url: https://bugeun1007.tistory.com/category/CTF%2CWargame
 
 # Category
 collections:

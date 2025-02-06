@@ -30,23 +30,23 @@ title: Archive
   }
 </style>
 
-<b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.3em;margin-right: 1em;"> Vulnerability Research </span></b>
+<b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.3em;margin-right: 1em;"> Research Publications </span></b>
 <br>
 <br>
-<small>Below are posts about vulnerability research</small>
+<small>Below is summary of vulnerability research</small>
 <br>
 <br>
 
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories.first" %}
 
 {% for category in postsByCategory %}
-{% if category.name != "Coding" and category.name != "Analysis Reports" %}
+{% if category.name != "Coding" and category.name != "Vulnerability Reports" %}
   <p style="line-height: 2em;">
-  <!--
+  
   <div><b><span style="color: rgb(156, 195, 231); font-size: 1.1em;margin-right: 1.2em; margin: 0em;"> {{ category.name }} </span></b></div> 
- -->
+  <hr>
 
-  {% if category.name == "Posts" %}
+  {% if category.name == "Blog" %}
       <ul style="list-style: none; padding: 0; margin: 0;"> 
       {% for post in category.items %}
         <li style="margin-bottom: 0.3em;">
@@ -83,14 +83,15 @@ title: Archive
 {% endfor %}
 
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories.first" %}
+
 {% for category in postsByCategory %}
-{% if category.name == "Analysis Reports" %}
+{% if category.name == "Vulnerability Reports" %}
   <p style="line-height: 2em;">
   <div><b><span style="color: rgb(156, 195, 231); font-size: 1.1em;margin-right: 1.2em; margin: 0em;"> {{ category.name }} </span></b></div> 
   <hr>
 
 <!-- Analysis Reports -->
-  {% if category.name == "Analysis Reports" %}
+  {% if category.name == "Vulnerability Reports" %}
   {% assign subCategories = category.items | where_exp: "post", "post.categories.size > 1" | group_by_exp: "post", "post.categories[1]" %}
   {% for subCategory in subCategories %}
   <p style="line-height: 1.5;">
