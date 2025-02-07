@@ -57,7 +57,9 @@ for entry in feed.entries:
         f.write(f"- Vulnerability Reports\n")
         f.write(f"- asd\n")
         f.write(f"---\n\n")
+        f.write(f'<a href = \"{entry.link}\">link here</a>\n')
         f.write(content_md)
+
 
     print(f"✅ {filename} 저장 완료!")
 

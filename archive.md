@@ -35,6 +35,11 @@ title: Archive
 <br>
 <small>Below is summary of vulnerability research</small>
 <br>
+<p style="line-height: 2;">
+
+<small>Find my <span style="color: rgb(156, 195, 231);">Writeups</span> of CTF/Wargame on => </small>
+<small><a href = "https://bugeun1007.tistory.com/category/CTF%2CWargame"> Here</a></small>
+<br>
 <br>
 
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories.first" %}
