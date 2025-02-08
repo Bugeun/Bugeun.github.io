@@ -51,9 +51,6 @@ nav:
   - title: Coding
     url: /Coding
 
-  - title: Writeups
-    url: https://bugeun1007.tistory.com/category/CTF%2CWargame
-
 # Category
 collections:
   category:
