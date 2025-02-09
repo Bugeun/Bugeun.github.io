@@ -37,8 +37,7 @@ title: Archive
 <br>
 <p style="line-height: 2;">
 
-<small>Find my <span style="color: rgb(156, 195, 231);">Writeup</span> of CTF/Wargame on => </small>
-<small><a href = "https://bugeun1007.tistory.com/category/CTF%2CWargame"> Here</a></small>
+<small>Find my <a href = "https://bugeun1007.tistory.com/category/CTF%2CWargame"><span style="color: rgb(156, 195, 231);">Writeup</span></a> of CTF/Wargame
 <br>
 <br>
 
