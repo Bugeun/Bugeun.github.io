@@ -120,7 +120,7 @@ while True:
                 f.write(f"---\n")
                 f.write(f"title: \"{title}\"\n")
                 f.write(f"date: {post_date}\n")
-                f.write(f"categories: Blog\n")
+                f.write(f"categories: Articles,Papers\n")
                 f.write(f"---\n\n")
                 f.write(content_md)
 

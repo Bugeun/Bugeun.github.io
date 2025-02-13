@@ -50,7 +50,7 @@ title: Archive
   <div><b><span style="color: rgb(156, 195, 231); font-size: 1.1em;margin-right: 1.2em; margin: 0em;"> {{ category.name }} </span></b></div> 
   <hr>
 
-  {% if category.name == "Blog" %}
+  {% if category.name == "Articles,Papers" %}
       <ul style="list-style: none; padding: 0; margin: 0;"> 
       {% for post in category.items %}
         <li style="margin-bottom: 0.3em;">
@@ -89,7 +89,7 @@ title: Archive
 {% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories.first" %}
 
 {% for category in postsByCategory %}
-{% if category.name != "Coding" and category.name != "Blog" %}
+{% if category.name != "Coding" and category.name != "Articles,Papers" %}
   <p style="line-height: 2em;">
   
   <div><b><span style="color: rgb(156, 195, 231); font-size: 1.1em;margin-right: 1.2em; margin: 0em;"> {{ category.name }} </span></b></div> 
