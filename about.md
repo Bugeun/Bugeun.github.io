@@ -2,7 +2,13 @@
 layout: page
 #title: About Me
 ---
-
+<style>
+  hr {
+    margin-bottom: 0.5em !important;  /* hr 간격 없애기 */
+    margin-top: 0.3em !important;
+    padding: 0 !important;
+  }
+  </style>
 
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
   <img src="/assets/lucy.jpg" alt="About Photo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 2px solid #ddd;margin-top: 50px;margin-bottom: 50px;">
@@ -18,7 +24,7 @@ layout: page
   <br>
   <br>
 
-<h1> EDUCATION </h1>
+<b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.5em;margin-right: 1em;"> EDUCATION </span></b>
 <hr>
 
 <h3>Seoul Arts University</h3>
@@ -29,7 +35,7 @@ layout: page
 <br>
 <br>
 
-<h1> EXPERIENCE </h1>
+<b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.5em;margin-right: 1em;"> EXPERIENCE </span></b>
 <hr>
 <h3>Work History</h3>
 &nbsp;&nbsp;&nbsp;<small> (2024.04 - Till now) SK Shieldus Senior Researcher </small>
@@ -40,7 +46,7 @@ layout: page
 <br>
 
 
-<h1> ACHIEVEMENTS </h1>
+<b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.5em;margin-right: 1em;"> ACHIEVEMENTS </span></b>
 <hr>
 
 <h3>(2025) Pwn2Own Automotive Tokyo 2025 Win a prize (Team SK Shieluds)</h3>
