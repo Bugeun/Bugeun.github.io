@@ -5,17 +5,14 @@ from bs4 import BeautifulSoup
 import html2text
 from datetime import datetime
 
-# Blogger RSS 피드 URL
-BLOG_FEED_URL = "https://bugeun.blogspot.com/feeds/posts/default?alt=rss"
-
 # 티스토리 블로그 카테고리 페이지 기본 URL
 T_BLOG_URL = "https://bugeun1007.tistory.com/category/Posts"
 PAGE_PARAM = "?page="
 
 # 마크다운 파일 저장 경로
-POSTS_DIR = r"C:\Users\choib\OneDrive\문서\GitHub\bugeun.github.io\_posts\Blogger"
+
 T_POSTS_DIR = r"C:\Users\choib\OneDrive\문서\GitHub\bugeun.github.io\_posts\Tistory"
-os.makedirs(POSTS_DIR, exist_ok=True)
+
 os.makedirs(T_POSTS_DIR, exist_ok=True)
 
 # User-Agent 설정 (크롤링 차단 방지)
@@ -27,42 +24,6 @@ HEADERS = {
 converter = html2text.HTML2Text()
 converter.ignore_links = False  # 링크 유지
 
-# ✅ 1. Blogger RSS 파싱
-print("\n🌐 Blogger RSS 피드 크롤링 시작!")
-
-# RSS 데이터 가져오기
-feed = feedparser.parse(BLOG_FEED_URL)
-
-# 블로그 글 파싱 및 Markdown 저장
-for entry in feed.entries:
-    title = entry.title
-    date_string = entry.published  # 예: "Wed, 05 Feb 2025 04:14:00 +0000"
-    date_object = datetime.strptime(date_string, "%a, %d %b %Y %H:%M:%S %z")
-    date = date_object.date()
-    
-    content_html = entry.content[0].value if "content" in entry else entry.summary
-    content_md = converter.handle(content_html)
-
-    # 파일 이름 정리
-    safe_title = title.replace(" ", "-").replace("/", "-").replace("?", "").replace(":", "").lower()
-    filename = f"{date}-{safe_title}.md"
-    filepath = os.path.join(POSTS_DIR, filename)
-
-    # Markdown 파일 저장
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(f"---\n")
-        f.write(f"title: \"{title}\"\n")
-        f.write(f"date: {date}\n")
-        f.write(f"categories:\n")
-        f.write(f"- Vulnerability Reports\n")
-        f.write(f"---\n\n")
-        f.write(f'<a href = \"{entry.link}\">link here</a>\n')
-        f.write(content_md)
-
-
-    print(f"✅ {filename} 저장 완료!")
-
-print("\n🎉 모든 Blogger 글을 Markdown으로 변환 완료!")
 
 # ✅ 2. Tistory 크롤링 (모든 페이지)
 print(f"\n🌐 티스토리 블로그 크롤링 시작!")
