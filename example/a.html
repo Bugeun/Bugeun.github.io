@@ -1,0 +1,83 @@
+---
+layout: default
+title: 
+---
+
+<br>
+<b><span style = " color: rgba(207, 203, 203, 0.48);font-size: 1.3em;margin-right: 1em;"> Research Publications </span></b>
+<hr>
+<small><a href = "https://bugeun1007.tistory.com/category/CTF%2CWargame"><span style="color: rgb(156, 195, 231);">Here</span></a>
+<br>
+<br>
+
+{% assign postsByCategory = site.posts | group_by_exp: "post", "post.categories.first" %}
+
+{% for category in postsByCategory %}
+  <p style="line-height: 2em;">
+  
+  <div><b><span style="color: rgb(156, 195, 231); font-size: 1.1em;margin-right: 1.2em; margin: 0em;"> {{ category.name }} </span></b></div> 
+  <hr>
+
+  {% if category.name == "Articles,Papers" %}
+      <ul style="list-style: none; padding: 0; margin: 0;"> 
+      {% for post in category.items %}
+        <li style="margin-bottom: 0.3em;">
+            <span style="color: #8b949e; font-size: 0.8em; margin-right: 0.8em;margin-left: 0em;">
+              {{ post.date | date: "%Y-%m-%d" }}
+            </span>
+            <a href="{{ post.url }}" style="font-size: 0.8em; text-decoration: none; color: rgb(255, 255, 255);">
+              {{ post.title }}
+            </a>
+        </li>
+      {% endfor %}
+        <div><br></div>
+      </ul>
+  
+
+  {% endif %}
+  {% endfor %}
+
+
+<div class="posts">
+  
+
+  {% assign current_category = page.category %}
+  {% for post in paginator.posts %}
+  
+  <article class="post">
+
+    {% if post.categories %}
+    <div class="post-categories">
+      {% for category in post.categories %}
+        <span class="category">{{ category }}</span>
+      {% endfor %}
+    </div>
+   {% endif %}
+    
+
+    <h1 class="post-title">
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+
+    {{ post.content }}
+  </article>
+  {% endfor %}
+</div>
+<!--
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+-->

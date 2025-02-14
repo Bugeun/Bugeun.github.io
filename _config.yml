@@ -42,12 +42,6 @@ version: 3.0.0
 # Navbar page list
 nav:
 
-  - title: About
-    url: /about
-
-  - title: VR-Blog
-    url: https://bugeun1007.tistory.com/
-
 # Category
 collections:
   category:
